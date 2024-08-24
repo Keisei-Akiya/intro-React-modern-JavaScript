@@ -1,3 +1,23 @@
-4-modern-js/node_modules
+# ビルド成果物
+/build/
+/dist/
 
-4-modern-fs/package*.json
+# 依存関係
+/node_modules/
+/vendor/
+
+# IDE設定
+.vscode/
+.idea/
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+
+# ログファイル
+*.log
+
+# 一時ファイル
+*.tmp
+
+4-modern-js/node_modules/
