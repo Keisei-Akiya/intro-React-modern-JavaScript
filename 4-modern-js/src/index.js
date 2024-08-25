@@ -231,22 +231,22 @@
 //     console.log("val is falsy");
 // }
 
-const flag1 = true;
-const flag2 = false;
+// const flag1 = true;
+// const flag2 = false;
 
-if (flag1 || flag2) {
-    console.log("1 or 2 is true");
-}
-if (flag1 && flag2) {
-    console.log("1 and 2 are true");
-}
+// if (flag1 || flag2) {
+//     console.log("1 or 2 is true");
+// }
+// if (flag1 && flag2) {
+//     console.log("1 and 2 are true");
+// }
 
 // ||は左側がtruthyの時，その時点で返却する．
-const num = 100;
-const fee = num || "金額未設定です";
-console.log(fee);
+// const num = 100;
+// const fee = num || "金額未設定です";
+// console.log(fee);
 
 // && は左側がfalsyの時その時点で返却
-const num2 = null;
-const fee2 = num2 && "何か設定されました"
-console.log(fee2);
+// const num2 = null;
+// const fee2 = num2 && "何か設定されました"
+// console.log(fee2);
