@@ -1,25 +1,47 @@
-// console.log("Script loaded");
+const onClickAdd = () => {
+    //テキストボックスの値を取得
+    const inputText = document.getElementById("add-text").value;
+    //テキストボックスの値を初期化
+    document.getElementById("add-text").value = "";
 
-// const onClickAdd = () => {
-//     console.log("Button clicked");
-//     const inputText = document.getElementById("add-text").value;
-//     alert(inputText);
-// }
+    // li生成
+    const li = document.createElement("li");
 
-// // id add-buttonが押されたとき，clickを検知して，onClickAdd()を実行
-// document.getElementById("add-button").addEventListener("click", onClickAdd);
+    // div生成
+    const div = document.createElement("div");
+    div.className = "list-row";
 
-document.addEventListener('DOMContentLoaded', function() {
-    const onClickAdd = () => {
-        const inputText = document.getElementById("add-text").value;
-        alert(inputText);
-    }
+    // p生成
+    const p = document.createElement("p")
+    p.className = "todo-item";
+    p.innerText = inputText;
 
-    const addButton = document.getElementById("add-button");
-    if (addButton) {
-        addButton.addEventListener("click", onClickAdd);
-        console.log("Event listener added");
-    } else {
-        console.error("Button not found");
-    }
-});
+    // button(完了)タグ生成
+    const completeButton = document.createElement("button");
+    completeButton.innerText = "done";
+    console.log(completeButton);
+    completeButton.addEventListener("click", () =>{
+        alert("done");
+    })
+
+    // button(削除)タグ生成
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "delete";
+    deleteButton.addEventListener("click", () => {
+        alert("delete");
+    })
+
+    // 階層構造
+    div.appendChild(p); // divの子がp
+    div.appendChild(completeButton);
+    div.appendChild(deleteButton);
+    li.appendChild(div); // liの子がdiv
+    // どちらが先でも結果は同じだが，この順番のほうが早い．
+
+    // 未完了リストに追加
+    document.getElementById("incomplete-list").appendChild(li);
+
+}
+
+// id add-buttonが押されたとき，clickを検知して，onClickAdd()を実行
+document.getElementById("add-button").addEventListener("click", onClickAdd);
