@@ -175,7 +175,7 @@
 /**
  * map, filterを使った配列の処理
  */
-const nameArr = ["Akiya", "Yamaguchi", "Tanaka"];
+// const nameArr = ["Akiya", "Yamaguchi", "Tanaka"];
 // for (let index = 0; index < nameArr.length; index++) {
 //     console.log(nameArr[index]);
 // }
@@ -192,11 +192,61 @@ const nameArr = ["Akiya", "Yamaguchi", "Tanaka"];
 // })
 // console.log(newNumArr);
 
-const newNameArr = nameArr.map((name) => {
-    if (name === "Akiya") {
-        return name;
-    } else {
-        return `${name}さん`;
-    }
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//     if (name === "Akiya") {
+//         return name;
+//     } else {
+//         return `${name}さん`;
+//     }
+// });
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ */
+// ある条件 ？ 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 > 0 ? "true!" : "false!";
+// console.log(val1);
+
+// const num = "1300";
+// console.log(num.toLocaleString()); // 数値を3桁区切りにする．
+
+// const formattedNum = typeof num ==='number' ? num.toLocaleString : "数値を入力してください";
+// console.log(formattedNum)
+
+// const checkSum = (num1, num2) => {
+//     return num1 + num2 > 100 ? "over 100" : "許容範囲内";
+// }
+// console.log(checkSum(60, 50))
+
+/**
+ * 論理演算子の本当の意味を知ろう && ||
+ */
+// truthy, falsy
+// "ABC" 0 10 undefined null false NaN "" [] {}
+// const val = "ABC";
+// if (val) {
+//     console.log("val is truthy");
+// } else {
+//     console.log("val is falsy");
+// }
+
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+    console.log("1 or 2 is true");
+}
+if (flag1 && flag2) {
+    console.log("1 and 2 are true");
+}
+
+// ||は左側がtruthyの時，その時点で返却する．
+const num = 100;
+const fee = num || "金額未設定です";
+console.log(fee);
+
+// && は左側がfalsyの時その時点で返却
+const num2 = null;
+const fee2 = num2 && "何か設定されました"
+console.log(fee2);
