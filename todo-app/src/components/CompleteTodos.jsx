@@ -1,5 +1,5 @@
 export const CompleteTodos = (props) => {
-  const { todos, onClick } = props;
+  const { todos, onClickBack } = props;
   return (
     <div className="complete-area">
       <p className="title">Completed TODO</p>
@@ -8,7 +8,7 @@ export const CompleteTodos = (props) => {
           <li key={todo}>
             <div className="list-row">
               <p className="todo-item">{todo}</p>
-              <button onClick={() => onClick(index)}>return</button>
+              <button onClick={() => onClickBack(index)}>return</button>
             </div>
           </li>
         ))}
